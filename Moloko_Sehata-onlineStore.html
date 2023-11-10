@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MC's Online Store</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <link rel="icon" href="Images/MC.png">
+
+</head>
+<body>
+    <h1>Shopping Cart</h1>
+
+    <div>
+        <h2>Products</h2>
+        <div class="item">
+            <span>T-Force DELTA RGB - 32GB(2x16GB) DDR4 DRAM 3600MHz Desktop Memory</span>
+            <img src="Images/ram.png" alt="T-Force DELTA RGB - 32GB(2x16GB) DDR4 DRAM 3600MHz Desktop Memory"
+                 class="product-image" />
+            <button onclick="addToCart('T-Force DELTA RGB - 32GB(2x16GB) DDR4 DRAM 3600MHz Desktop Memory', 1599)">Buy Now</button>
+        </div>
+
+        <br />
+        <hr />
+
+        <div class="item">
+            <span>Intel core i9-13900F Processor</span>
+            <img src="Images/i9.png" alt="Intel core i9-13900F Processor"
+                 class="product-image" />
+            <button onclick="addToCart('Intel core i9-13900F Processor', 20000)">Buy Now</button>
+        </div>
+    </div>
+
+    <br />
+
+    <div id="cart">
+        <h2>Shopping Cart</h2>
+    </div>
+
+    <h2>Card Details</h2>
+    <form>
+        <label for="cardNumber">Card Number: </label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" />
+        <br />
+
+        <label for="expiration">Expiration Date</label>
+        <input type="text" id="expiration" placeholder="MM/YY" />
+        <br />
+
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" placeholder="123" />
+        <br />
+
+    </form>
+
+    <button onclick="checkOut()">Checkout</button>
+
+    <script src="Script.js"></script>
+</body>
+</html>
